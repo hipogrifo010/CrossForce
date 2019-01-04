@@ -1,12 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[ExecuteInEditMode]
+[RequireComponent(typeof(MeshFilter))]
+[RequireComponent(typeof(MeshRenderer))]
+[RequireComponent(typeof(MeshCollider))]
+
 
 public class CUSTOM : MonoBehaviour
 {
 
     public int xSize;
-    public int ySize;
+    public int zSize;
  
 
 
@@ -35,7 +40,7 @@ public class CUSTOM : MonoBehaviour
         Vector3[] vertices = new Vector3[4]
         {
             //sentido reloj           punto de 2 a0             punto de 0a1          punto de 1a2(compeltaTriang)
-            new Vector3 (0,0,0),new Vector3(xSize,0,0),new Vector3(0,ySize,0),new Vector3(xSize,ySize,0)
+            new Vector3 (0,0,0),new Vector3(xSize,0,0),new Vector3(0,0,zSize),new Vector3(xSize,0,zSize)
         };
         //triangulos
         int[] triangulos = new int[6];
